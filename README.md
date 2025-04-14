@@ -1,54 +1,11 @@
-# React + TypeScript + Vite
+В решении использованы функциональные компоненты React с применением хуков (useState, useEffect, useCallback, useRef). Это обусловлено следующими причинами:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Современный подход: Функциональные компоненты являются рекомендуемым способом разработки в актуальных версиях React. Хуки позволяют реализовать весь необходимый функционал без использования классов.
 
-Currently, two official plugins are available:
+Простота и читаемость: Функциональные компоненты делают код более компактным и декларативным, что улучшает читаемость и упрощает поддержку.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Гибкость для расширения: Хуки позволяют легко выделять повторяющуюся логику в кастомные хуки, что делает архитектуру более модульной и масштабируемой.
 
-## Expanding the ESLint configuration
+Не было жёсткого требования: В задании не указано, что реализация должна быть выполнена с использованием классовых компонентов. Представление class ParamEditor использовано как пример интерфейса, а не обязательная форма реализации.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Таким образом, реализация на функциональных компонентах соответствует всем требованиям задания и одновременно следует современным best practices React-разработки.
